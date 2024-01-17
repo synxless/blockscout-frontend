@@ -47,12 +47,12 @@ export default function useNavItems(): ReturnType {
       isActive: pathname === '/txs' || pathname === '/tx/[hash]',
     };
     const verifiedContracts: NavItem | null =
-     {
-       text: 'Verified contracts',
-       nextRoute: { pathname: '/verified-contracts' as const },
-       icon: 'verified',
-       isActive: pathname === '/verified-contracts',
-     };
+    {
+      text: 'Verified contracts',
+      nextRoute: { pathname: '/verified-contracts' as const },
+      icon: 'verified',
+      isActive: pathname === '/verified-contracts',
+    };
 
     if (config.features.zkEvmRollup.isEnabled) {
       blockchainNavItems = [
@@ -76,9 +76,9 @@ export default function useNavItems(): ReturnType {
         [
           txs,
           // eslint-disable-next-line max-len
-          { text: `Deposits (L1${ rightLineArrow }L2)`, nextRoute: { pathname: '/l2-deposits' as const }, icon: 'arrows/south-east', isActive: pathname === '/l2-deposits' },
+          { text: `Deposits (L1${rightLineArrow}L2)`, nextRoute: { pathname: '/l2-deposits' as const }, icon: 'arrows/south-east', isActive: pathname === '/l2-deposits' },
           // eslint-disable-next-line max-len
-          { text: `Withdrawals (L2${ rightLineArrow }L1)`, nextRoute: { pathname: '/l2-withdrawals' as const }, icon: 'arrows/north-east', isActive: pathname === '/l2-withdrawals' },
+          { text: `Withdrawals (L2${rightLineArrow}L1)`, nextRoute: { pathname: '/l2-withdrawals' as const }, icon: 'arrows/north-east', isActive: pathname === '/l2-withdrawals' },
         ],
         [
           blocks,
@@ -151,18 +151,18 @@ export default function useNavItems(): ReturnType {
         icon: 'apps',
         isActive: pathname.startsWith('/app'),
       } : null,
-      config.features.stats.isEnabled ? {
-        text: 'Charts & stats',
-        nextRoute: { pathname: '/stats' as const },
-        icon: 'stats',
-        isActive: pathname === '/stats',
-      } : null,
-      apiNavItems.length > 0 && {
-        text: 'API',
-        icon: 'restAPI',
-        isActive: apiNavItems.some(item => isInternalItem(item) && item.isActive),
-        subItems: apiNavItems,
-      },
+      // config.features.stats.isEnabled ? {
+      //   text: 'Charts & stats',
+      //   nextRoute: { pathname: '/stats' as const },
+      //   icon: 'stats',
+      //   isActive: pathname === '/stats',
+      // } : null,
+      // apiNavItems.length > 0 && {
+      //   text: 'API',
+      //   icon: 'restAPI',
+      //   isActive: apiNavItems.some(item => isInternalItem(item) && item.isActive),
+      //   subItems: apiNavItems,
+      // },
       {
         text: 'Other',
         icon: 'gear',
@@ -225,5 +225,5 @@ export default function useNavItems(): ReturnType {
     };
 
     return { mainNavItems, accountNavItems, profileItem };
-  }, [ pathname ]);
+  }, [pathname]);
 }
