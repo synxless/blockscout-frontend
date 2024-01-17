@@ -118,7 +118,7 @@ const Footer = () => {
   const renderProjectInfo = React.useCallback((gridArea?: GridProps['gridArea']) => {
     return (
       <Box gridArea={ gridArea }>
-        <Link fontSize="xs" href="https://www.blockscout.com">blockscout.com</Link>
+        <Link fontSize="xs" href="https://bitcoinarcade.xyz">bitcoinarcade.xyz</Link>
         <Text mt={ 3 } fontSize="xs">
           Ushering the golden era of Gaming on Bitcoin
         </Text>
