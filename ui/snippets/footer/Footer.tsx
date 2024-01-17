@@ -120,9 +120,9 @@ const Footer = () => {
       <Box gridArea={ gridArea }>
         <Link fontSize="xs" href="https://www.blockscout.com">blockscout.com</Link>
         <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+          Ushering the golden era of Gaming on Bitcoin
         </Text>
-        <VStack spacing={ 1 } mt={ 6 } alignItems="start">
+        <VStack spacing={ 1 } mt={ 6 } alignItems="start" hidden>
           { apiVersionUrl && (
             <Text fontSize="xs">
               Backend: <Link href={ apiVersionUrl } target="_blank">{ backendVersionData?.backend_version }</Link>
