@@ -31,12 +31,12 @@ const DEFAULT_CHART_MARGIN = { bottom: 20, left: 40, right: 20, top: 10 };
 
 const ChartWidgetGraph = ({ isEnlarged, items, onZoom, isZoomResetInitial, title, margin: marginProps, units }: Props) => {
   const isMobile = useIsMobile();
-  const color = useToken('colors', 'blue.200');
+  const color = useToken('colors', 'yellow.200');
   const chartId = `chart-${ title.split(' ').join('') }-${ isEnlarged ? 'fullscreen' : 'small' }`;
 
   const overlayRef = React.useRef<SVGRectElement>(null);
 
-  const [ range, setRange ] = React.useState<[ Date, Date ]>([ items[0].date, items[items.length - 1].date ]);
+  const [ range, setRange ] = React.useState<[Date, Date]>([ items[0].date, items[items.length - 1].date ]);
 
   const rangedItems = React.useMemo(() =>
     items.filter((item) => item.date >= range[0] && item.date <= range[1]),
@@ -79,7 +79,7 @@ const ChartWidgetGraph = ({ isEnlarged, items, onZoom, isZoomResetInitial, title
     axesConfig,
   });
 
-  const handleRangeSelect = React.useCallback((nextRange: [ Date, Date ]) => {
+  const handleRangeSelect = React.useCallback((nextRange: [Date, Date]) => {
     setRange([ nextRange[0], nextRange[1] ]);
     onZoom();
   }, [ onZoom ]);

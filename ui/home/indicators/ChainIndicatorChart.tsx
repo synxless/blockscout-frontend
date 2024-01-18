@@ -18,14 +18,14 @@ const CHART_MARGIN = { bottom: 5, left: 10, right: 10, top: 0 };
 
 const ChainIndicatorChart = ({ data }: Props) => {
   const overlayRef = React.useRef<SVGRectElement>(null);
-  const lineColor = useToken('colors', 'blue.500');
+  const lineColor = useToken('colors', 'yellow.500');
 
   const axesConfig = React.useMemo(() => {
     return {
       x: { ticks: 4 },
       y: { ticks: 3, nice: true },
     };
-  }, [ ]);
+  }, []);
 
   const { rect, ref, axis, innerWidth, innerHeight } = useTimeChartController({
     data,

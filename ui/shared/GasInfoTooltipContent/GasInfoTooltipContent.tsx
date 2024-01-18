@@ -3,9 +3,9 @@ import React from 'react';
 
 import type { GasPrices } from 'types/api/stats';
 
-const GasInfoTooltipContent = ({ gasPrices }: {gasPrices: GasPrices}) => {
+const GasInfoTooltipContent = ({ gasPrices }: { gasPrices: GasPrices }) => {
   const nameStyleProps = {
-    color: useColorModeValue('blue.100', 'blue.600'),
+    color: useColorModeValue('yellow.100', 'yellow.600'),
   };
 
   return (

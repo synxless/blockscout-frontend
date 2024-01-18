@@ -17,7 +17,7 @@ interface Props {
 }
 
 const ChartSelectionX = ({ anchorEl, height, scale, data, onSelect }: Props) => {
-  const borderColor = useToken('colors', 'blue.200');
+  const borderColor = useToken('colors', 'yellow.200');
 
   const ref = React.useRef(null);
   const isActive = React.useRef(false);
@@ -66,7 +66,7 @@ const ChartSelectionX = ({ anchorEl, height, scale, data, onSelect }: Props) => 
     startX.current = undefined;
     endX.current = undefined;
     d3.select(ref.current).attr('opacity', 0);
-  }, [ ]);
+  }, []);
 
   const handelMouseUp = React.useCallback(() => {
     if (!isActive.current) {
