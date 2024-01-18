@@ -58,7 +58,7 @@ const hiddenLinks =
 
 // eslint-disable-next-line max-len
 const HOMEPAGE_PLATE_BACKGROUND_DEFAULT =
-  'linear-gradient(315deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%)';
+  'linear-gradient(135deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%)';
 
 const UI =
   Object.freeze(
